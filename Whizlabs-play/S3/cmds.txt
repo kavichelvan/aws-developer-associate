@@ -1,0 +1,8 @@
+https://play.whizlabs.com/site/task_details?lab_type=1&task_id=46&quest_id=36
+
+ssh -i MyEC2Key.pem ec2-user@13.233.118.34
+aws s3 ls s3://whizlabs-ec2-s3-role
+aws s3 mv hel.txt s3://whizlabs-ec2-s3-role
+aws s3 ls s3://whizlabs-ec2-s3-role
+
+aws s3 presign s3://whizlabs-ec2-s3-role/big.txt --expires-in 60
